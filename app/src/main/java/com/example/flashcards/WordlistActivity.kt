@@ -3,8 +3,6 @@ package com.example.flashcards
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.commit
-import androidx.navigation.NavHost
 import androidx.navigation.fragment.NavHostFragment
 import com.example.flashcards.data.WordPair
 import com.example.flashcards.databinding.ActivityWordlistBinding

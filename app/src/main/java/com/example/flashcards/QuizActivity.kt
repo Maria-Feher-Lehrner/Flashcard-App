@@ -36,8 +36,9 @@ class QuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
-
         Log.e(LOG_TAG, "onCreate")
+
+        //TODO: Hier evtl. noch etwas aufraeumen und code rund um transferredWordlist in eigene fun auslagern
         transferredWordList =
             intent.getSerializableExtra(EXTRA_KEY_WORDLIST) as? HashMap<String, WordPair>
         Log.i(LOG_TAG, "Result from other activity $transferredWordList")
@@ -170,12 +171,6 @@ class QuizActivity : AppCompatActivity() {
             }
         }
         return displayedWord
-
-        /*return if (toggleLanguage.isChecked) {
-        wordList.values.random()
-    } else {
-        wordList.keys.random()
-    }*/
     }
 
     private fun updateScore(delta: Int) {

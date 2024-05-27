@@ -4,16 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextUtils.replace
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.fragment.app.commit
 import com.example.flashcards.data.WordPair
 import com.example.flashcards.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.e(LOG_TAG, "onCreateInstanceState called")
 
-        initializeWordList()
+
 
         val saveButton = findViewById<Button>(R.id.btn_save)
         val quizButton = findViewById<Button>(R.id.btn_quiz)
@@ -43,11 +42,7 @@ class MainActivity : AppCompatActivity() {
         //testfeld
         val testField = findViewById<TextView>(R.id.test)
 
-        fab.setOnClickListener {
-            //TODO: hier noch sinnvollere action einfuegen!
-            Log.d(LOG_TAG, "FAB Button was clicked")
-        }
-
+        initializeWordList()
         inputGer = findViewById(R.id.eT_language1)
         inputEn = findViewById(R.id.eT_language2)
 
@@ -59,7 +54,6 @@ class MainActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         }
-
         val textWatcherEn = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 Log.d(LOG_TAG, "inputEn afterTextChanged: ${s?.length ?: 0} characters")
@@ -82,6 +76,7 @@ class MainActivity : AppCompatActivity() {
             inputGer.text.clear()
             inputEn.text.clear()
 
+            //TODO: Am Ende Testfeld rausnehmen.
             testField.text = wordList.toString()
         }
 
@@ -96,20 +91,21 @@ class MainActivity : AppCompatActivity() {
                  wordListAsSerializable.forEach { (key, value) ->
                      println("Key: $key, Value: $value")
             }
-
             startActivity(intent)
         }
-
         binding.btnEdit.setOnClickListener{
             val intent = Intent(this, WordlistActivity::class.java)
             val wordListAsSerializable = HashMap(wordList)
             intent.putExtra(EXTRA_KEY_WORDLIST, wordListAsSerializable)
             startActivity(intent)
         }
-
         deleteButton.setOnClickListener {
             wordList.clear()
             testField.text = wordList.toString()
+        }
+        fab.setOnClickListener {view ->
+            Log.d(LOG_TAG, "FAB was clicked")
+            Snackbar.make(view, "FAB was clicked", Snackbar.LENGTH_LONG).show()
         }
     }
 
