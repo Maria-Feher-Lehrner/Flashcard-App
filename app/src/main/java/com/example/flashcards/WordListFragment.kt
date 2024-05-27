@@ -56,6 +56,16 @@ class WordListFragment : Fragment() {
         const val ARG_WORD_LIST = "word_list"
     }
 
+    override fun onStart() {
+        super.onStart()
+        Log.i(LOG_TAG, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(LOG_TAG, "onResume")
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         Log.e(LOG_TAG, "onDestroy")

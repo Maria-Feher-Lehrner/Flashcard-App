@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class SocialsActivity: AppCompatActivity() {
+class SocialsActivity : AppCompatActivity() {
 
     val LOG_TAG = "SocialsActivity"
     lateinit var sharedProgressTextView: TextView
@@ -19,5 +19,15 @@ class SocialsActivity: AppCompatActivity() {
         val textFromIntent = intent.getStringExtra((Intent.EXTRA_TEXT) ?: "nothing")
         Log.i(LOG_TAG, "Text from sharing: $textFromIntent")
         sharedProgressTextView.text = textFromIntent
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(LOG_TAG, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(LOG_TAG, "onResume")
     }
 }

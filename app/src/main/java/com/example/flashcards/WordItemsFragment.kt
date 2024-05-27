@@ -14,7 +14,7 @@ import com.example.flashcards.databinding.FragmentWorditemsBinding
 class WordItemsFragment: Fragment() {
 
     private var _binding: FragmentWorditemsBinding? = null
-
+    val LOG_TAG = "WordItemsFragment"
 
     private val binding get() = _binding!!
     val fragmentArgs: WordItemsFragmentArgs by navArgs()
@@ -39,6 +39,16 @@ class WordItemsFragment: Fragment() {
         binding.btnBack.setOnClickListener{
             findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(LOG_TAG, "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(LOG_TAG, "onResume")
     }
 
 }
