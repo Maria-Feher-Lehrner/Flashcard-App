@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wordListFragment">
+
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.example.flashcards.WordListFragment"
+        android:label="Word List"
+        tools:layout="@layout/fragment_wordlist">
+        <action
+            android:id="@+id/action_WordListFragment_to_WordItemsFragment"
+            app:destination="@id/wordItemsFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wordItemsFragment"
+        android:name="com.example.flashcards.WordItemsFragment"
+        tools:layout="@layout/fragment_worditems">
+
+        <action
+            android:id="@+id/action_WordItemsFragment_to_WordListFragment"
+            app:destination="@id/wordListFragment" />
+
+        <argument
+            android:name="wordPair"
+            app:argType="com.example.flashcards.data.WordPair" />
+    </fragment>
+
+</navigation>

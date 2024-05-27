@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_quizTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flash-Quiz"
+            android:textColor="#2D4B65"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2D4B65"
+            android:text="So funktioniert's"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2D4B65"
+            android:text="Wähle zuerst in welche Richtung du dich testen möchtest (Deutsch zu Englisch oder Englisch zu Deutsch) Wenn du denkst, die Lösung zu kennen, drücke auf &quot;kontrollieren&quot;. Hattest du Recht? Dann klicke auf den Haken. Hast du falsch gelegen? Dann klicke auf das X. Versuche ein Wort mindestens 3x richtig zu erkennen!" />
+
+        <CheckedTextView
+            android:id="@+id/checkedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#2d4b65"
+            android:textColor="#fff"
+            android:text="ToggleButton"
+            android:textOff="EN>DE"
+            android:textOn="DE>EN" />
+
+        <Button
+            android:id="@+id/btn_quiz_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4378a2"
+            android:textColor="#fff"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:text="Quiz: nächstes Wort" />
+
+        <TextView
+            android:id="@+id/tv_checkWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#f4c434"
+            android:textColor="#2D4B65"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:text="kontrollieren" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_checkPositive"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:backgroundTint="#9acc8f"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            <Button
+                android:id="@+id/btn_checkNegative"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:backgroundTint="#af4474"
+                android:textColor="#fff"
+                android:text="X"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_end_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9ACC8F"
+                android:textColor="#2D4B65"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:text="Zurück zur Startseite" />
+
+            <TextView
+                android:id="@+id/testQuizView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TestQuizView" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_share"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4378a2"
+                app:srcCompat="@android:drawable/ic_menu_share" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
