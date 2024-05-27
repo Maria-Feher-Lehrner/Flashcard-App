@@ -14,7 +14,7 @@
             android:id="@+id/tv_quizTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Flash-Quiz"
+            android:text="@string/flash_quiz"
             android:textColor="#2D4B65"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#2D4B65"
-            android:text="So funktioniert's"
+            android:text="@string/so_funktioniert_s"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#2D4B65"
-            android:text="Wähle zuerst in welche Richtung du dich testen möchtest (Deutsch zu Englisch oder Englisch zu Deutsch) Wenn du denkst, die Lösung zu kennen, drücke auf &quot;kontrollieren&quot;. Hattest du Recht? Dann klicke auf den Haken. Hast du falsch gelegen? Dann klicke auf das X. Versuche ein Wort mindestens 3x richtig zu erkennen!" />
+            android:text="@string/w_hle_zuerst_in_welche_richtung_du_dich_testen_m_chtest_deutsch_zu_englisch_oder_englisch_zu_deutsch_wenn_du_denkst_die_l_sung_zu_kennen_dr_cke_auf_quot_kontrollieren_quot_hattest_du_recht_dann_klicke_auf_den_haken_hast_du_falsch_gelegen_dann_klicke_auf_das_x_versuche_ein_wort_mindestens_3x_richtig_zu_erkennen" />
 
         <CheckedTextView
             android:id="@+id/checkedTextView"
@@ -60,7 +60,7 @@
             android:textColor="#fff"
             android:layout_marginStart="80dp"
             android:layout_marginEnd="80dp"
-            android:text="Quiz: nächstes Wort" />
+            android:text="@string/quiz_n_chstes_wort" />
 
         <TextView
             android:id="@+id/tv_checkWord"
@@ -79,7 +79,7 @@
             android:textColor="#2D4B65"
             android:layout_marginStart="80dp"
             android:layout_marginEnd="80dp"
-            android:text="kontrollieren" />
+            android:text="@string/kontrollieren" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#af4474"
                 android:textColor="#fff"
-                android:text="X"
+                android:text="@string/x"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -125,13 +125,13 @@
                 android:textColor="#2D4B65"
                 android:layout_marginStart="80dp"
                 android:layout_marginEnd="80dp"
-                android:text="Zurück zur Startseite" />
+                android:text="@string/zur_ck_zur_startseite" />
 
             <TextView
                 android:id="@+id/testQuizView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TestQuizView" />
+                android:text="@string/testquizview" />
 
             <ImageButton
                 android:id="@+id/imgbtn_share"

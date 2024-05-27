@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="zurück"
+        android:text="@string/zur_ck"
         app:layout_constraintBottom_toTopOf="@id/linlay_items"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text=" bearbeiten (nicht funktional)"
+        android:text="@string/bearbeiten_nicht_funktional"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linlay_items" />
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Deutsches Wort:"
+        android:text="@string/deutsches_wort"
         app:layout_constraintTop_toBottomOf="@id/btn_editItem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -85,7 +85,7 @@
             android:id="@+id/et_editGER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Platzhalter (keine Funktion hinterlegt)" />
+            android:text="@string/platzhalter_keine_funktion_hinterlegt" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Englisches Wort:"
+        android:text="@string/englisches_wort"
         app:layout_constraintTop_toBottomOf="@id/TIL_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -113,7 +113,7 @@
             android:id="@+id/et_editEN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Platzhalter (keine Funktion hinterlegt)" />
+            android:text="@string/platzhalter_keine_funktion_hinterlegt_2" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

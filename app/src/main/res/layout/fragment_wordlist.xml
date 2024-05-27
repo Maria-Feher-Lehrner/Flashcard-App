@@ -42,7 +42,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="32dp"
                 android:layout_weight="1"
-                android:text=" bearbeiten (nicht fuktional)" />
+                android:text="@string/bearbeiten_nicht_fuktional" />
 
             <Button
                 android:id="@+id/btn_wordDelete"
@@ -53,7 +53,7 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="32dp"
                 android:layout_weight="1"
-                android:text="löschen (nicht funktional)" />
+                android:text="@string/l_schen_nicht_funktional" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true" /-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +20,7 @@
             android:ems="10"
             android:inputType="text"
             android:paddingTop="16px"
-            android:text="FLASHCARDS"
+            android:text="@string/title"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textColor="#2D4B65"
@@ -38,7 +30,7 @@
             android:id="@+id/tv_intro"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Deutsch-Englische Vokabel spielend einfach lernen!"
+            android:text="@string/subTitle"
             android:textAlignment="center"
             android:textColor="#2D4B65"
             android:textSize="20sp" />
@@ -52,7 +44,7 @@
             android:layout_marginEnd="16dp"
             android:textColor="#2D4B65"
             android:inputType="text"
-            android:text="Eingabe Deutsches Vokabel"
+            android:text="@string/eingabe_deutsches_vokabel"
             android:textSize="20sp" />
 
         <EditText
@@ -69,7 +61,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:textColor="#2D4B65"
-            android:text="Eingabe Englisches Vokabel"
+            android:text="@string/eingabe_englisches_vokabel"
             android:textSize="20sp" />
 
         <EditText
@@ -79,15 +71,6 @@
             android:ems="10"
             android:inputType="text" />
 
-        <!--LinearLayout
-            android:id="@+id/secondLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/btn_save"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_weight="1">-->
-
         <Button
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
@@ -96,7 +79,7 @@
             android:layout_marginEnd="80dp"
             android:backgroundTint="#9ACC8F"
             android:textColor="#2D4B65"
-            android:text="Speichern" />
+            android:text="@string/speichern" />
 
         <TextView
                 android:id="@+id/tv_titleQuiz"
@@ -104,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
                 android:backgroundTint="#8BC34A"
-                android:text="READY?"
+                android:text="@string/ready"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -117,13 +100,13 @@
                 android:layout_marginEnd="80dp"
                 android:backgroundTint="#4378A2"
                 android:textColor="#fff"
-                android:text="Vokabelquiz starten" />
+                android:text="@string/vokabelquiz_starten" />
 
             <TextView
                 android:id="@+id/tv_title2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wörterbuch bearbeiten"
+                android:text="@string/w_rterbuch_bearbeiten"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -140,7 +123,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="#F4c434"
                     android:textColor="#2D4B65"
-                    android:text="bearbeiten" />
+                    android:text="@string/bearbeiten" />
 
                 <Button
                     android:id="@+id/btn_delete"
@@ -149,9 +132,8 @@
                     android:layout_weight="1"
                     android:backgroundTint="#AF4474"
                     android:textColor="#fff"
-                    android:text="Wörterbuch löschen" />
+                    android:text="@string/w_rterbuch_l_schen" />
             </LinearLayout>
-        <!--/LinearLayout-->
 
         <ImageView
             android:id="@+id/iv_avatar"
