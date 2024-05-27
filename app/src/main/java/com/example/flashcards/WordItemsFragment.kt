@@ -33,8 +33,8 @@ class WordItemsFragment: Fragment() {
         binding.btnBack.setOnClickListener{
             findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
         }
-        binding.textView2.text = fragmentArgs.wordPair.wordGER
-        binding.textView3.text = fragmentArgs.wordPair.wordEN
+        binding.tvWordGER.text = fragmentArgs.wordPair.wordGER
+        binding.tvWordEN.text = fragmentArgs.wordPair.wordEN
 
     }
 

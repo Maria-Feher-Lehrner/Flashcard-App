@@ -43,10 +43,16 @@ class WordListFragment : Fragment() {
         val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         val divider = DividerItemDecoration(requireContext(), linearLayoutManager.orientation)
 
-        val adapter = WordListAdapter(wordPairList ?: arrayListOf())
+        val adapter = WordListAdapter(wordPairList ?: arrayListOf(), this.requireContext()
+        ){
+            val action = WordListFragmentDirections.actionWordListFragmentToWordItemsFragment(it)
+            findNavController().navigate(action)
+        }
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.adapter = adapter
         recyclerView.addItemDecoration(divider)
+
+
 
         //Log.i(LOG_TAG, "$wordPairList")
     }

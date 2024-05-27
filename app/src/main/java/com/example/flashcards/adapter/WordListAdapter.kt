@@ -17,9 +17,9 @@ import com.example.flashcards.WordListFragmentDirections
 const val LOG_TAG = "WordListAdapter"
 
 class WordListAdapter(
-    private var wordList: ArrayList<WordPair>/*,
+    private var wordList: ArrayList<WordPair>,
     private val context: Context,
-    private val itemClickListener: ((WordPair) -> Unit)*/
+    private val itemClickListener: ((WordPair) -> Unit)
 ) : RecyclerView.Adapter<WordPairHolder>() {
     /*var wordList = wordList
         set(value) {
@@ -44,10 +44,10 @@ class WordListAdapter(
         holder.germanWord.text = wordPair.wordGER
         holder.englishWord.text = wordPair.wordEN
 
-        /*holder.bindToWordPair(wordPair)
+        //holder.bindToWordPair(wordPair)
         holder.itemView.setOnClickListener{
             itemClickListener(wordPair)
-        }*/
+        }
     }
 }
 
