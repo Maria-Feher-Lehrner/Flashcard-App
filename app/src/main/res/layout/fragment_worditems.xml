@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="bearbeiten"
+        android:text=" bearbeiten (nicht funktional)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linlay_items" />
@@ -84,7 +84,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_editGER"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Platzhalter (keine Funktion hinterlegt)" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -111,7 +112,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_editEN"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Platzhalter (keine Funktion hinterlegt)" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

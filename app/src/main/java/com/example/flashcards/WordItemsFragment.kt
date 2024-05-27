@@ -36,6 +36,9 @@ class WordItemsFragment: Fragment() {
         binding.tvWordGER.text = fragmentArgs.wordPair.wordGER
         binding.tvWordEN.text = fragmentArgs.wordPair.wordEN
 
+        binding.btnBack.setOnClickListener{
+            findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
+        }
     }
 
 }
