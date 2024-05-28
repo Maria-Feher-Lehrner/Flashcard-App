@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyBlue"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -11,39 +12,48 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
         android:layout_weight="1">
 
         <TextView
             android:id="@+id/tv_Title"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:inputType="text"
-            android:paddingTop="16px"
+            android:layout_height="55dp"
             android:text="@string/title"
             android:textAlignment="center"
+            android:textColor="@color/darkBlue"
             android:textSize="24sp"
-            android:textColor="#2D4B65"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_intro"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:text="@string/subTitle"
             android:textAlignment="center"
-            android:textColor="#2D4B65"
+            android:textColor="@color/darkBlue"
             android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_decoration"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/greyBlue"
+            app:layout_constraintBottom_toTopOf="@+id/tv_input_GER"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/ask_2110967" />
 
         <TextView
             android:id="@+id/tv_input_GER"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="45dp"
             android:ems="10"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="#2D4B65"
-            android:inputType="text"
+            android:textColor="@color/darkBlue"
             android:text="@string/eingabe_deutsches_vokabel"
             android:textSize="20sp" />
 
@@ -51,16 +61,19 @@
             android:id="@+id/eT_language1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/input_field_for_german_word"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="text" />
 
         <TextView
             android:id="@+id/tv_input_EN"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="45dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="#2D4B65"
+            android:textColor="@color/darkBlue"
             android:text="@string/eingabe_englisches_vokabel"
             android:textSize="20sp" />
 
@@ -68,6 +81,9 @@
             android:id="@+id/eT_language2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/input_field_for_english_word"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="text" />
 
@@ -77,20 +93,20 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginEnd="80dp"
-            android:backgroundTint="#9ACC8F"
-            android:textColor="#2D4B65"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
             android:text="@string/speichern" />
 
-        <TextView
+        <!--<TextView
                 android:id="@+id/tv_titleQuiz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:backgroundTint="#8BC34A"
+                android:backgroundTint="@color/green"
                 android:text="@string/ready"
                 android:textAlignment="center"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold" />-->
 
             <Button
                 android:id="@+id/btn_quiz"
@@ -98,8 +114,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
                 android:layout_marginEnd="80dp"
-                android:backgroundTint="#4378A2"
-                android:textColor="#fff"
+                android:backgroundTint="@color/teal"
+                android:textColor="@color/white"
                 android:text="@string/vokabelquiz_starten" />
 
             <TextView
@@ -114,15 +130,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
 
                 <Button
                     android:id="@+id/btn_edit"
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#F4c434"
-                    android:textColor="#2D4B65"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/yellow"
+                    android:textColor="@color/darkBlue"
                     android:text="@string/bearbeiten" />
 
                 <Button
@@ -130,29 +149,20 @@
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#AF4474"
-                    android:textColor="#fff"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/white"
                     android:text="@string/w_rterbuch_l_schen" />
             </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_avatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_margin="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on"
-            tools:srcCompat="@android:drawable/btn_star_big_on" />
-
-        <TextView
+        <!-- NUR ZUM DEBUGGING
+            <TextView
             android:id="@+id/test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp" />-->
 
     </LinearLayout>
 
@@ -166,7 +176,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_info"
-        app:tint="#4378a2" />
+        app:tint="@color/teal" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

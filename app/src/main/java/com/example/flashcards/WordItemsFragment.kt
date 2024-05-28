@@ -36,6 +36,7 @@ class WordItemsFragment: Fragment() {
         binding.tvWordGER.text = fragmentArgs.wordPair.wordGER
         binding.tvWordEN.text = fragmentArgs.wordPair.wordEN
 
+        //Hier wird in Navigation kein Wert mehr zurückübergeben und deswegen ist nächster Screen komplett leer
         binding.btnBack.setOnClickListener{
             findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
         }

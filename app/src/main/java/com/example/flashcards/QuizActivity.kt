@@ -32,6 +32,8 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var toggleLanguage: ToggleButton
     private lateinit var currentWordKey: String
     private var transferredWordList: HashMap<String, WordPair>? = null
+    private var notificationId = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,8 +138,7 @@ class QuizActivity : AppCompatActivity() {
             val channelName = "Word Score Notifications"
             val notificationChannel =
                 NotificationChannel(CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_DEFAULT)
-            val notificationManager =
-                context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val notificationManager = NotificationManagerCompat.from(context)
             notificationManager.createNotificationChannel(notificationChannel)
         }
     }
@@ -154,11 +155,10 @@ class QuizActivity : AppCompatActivity() {
             BitmapFactory.decodeResource(context.resources, R.drawable.ic_launcher_foreground)
 
         builder.setLargeIcon(largeIcon)
-        val notificationId = 1
+        //ad notificationManager diese Schreibweise aktueller und lesbarer
         val notificationManager = NotificationManagerCompat.from(context)
-        notificationManager.notify(notificationId, builder.build())
+        notificationManager.notify(notificationId++, builder.build())
     }
-
 
     private fun provideRandomizedWord(wordList: HashMap<String, WordPair>): String {
         var displayedWord = ""

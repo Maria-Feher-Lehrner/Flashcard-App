@@ -26,4 +26,6 @@
     <string name="platzhalter_keine_funktion_hinterlegt_2">Platzhalter (keine Funktion hinterlegt)</string>
     <string name="bearbeiten_nicht_fuktional">bearbeiten (nicht fuktional)</string>
     <string name="l_schen_nicht_funktional">löschen (nicht funktional)</string>
+    <string name="input_field_for_german_word">input field for german word</string>
+    <string name="input_field_for_english_word">input field for english word</string>
 </resources>

@@ -26,12 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e(LOG_TAG, "onCreateInstanceState called")
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        Log.e(LOG_TAG, "onCreateInstanceState called")
-
-
 
         val saveButton = findViewById<Button>(R.id.btn_save)
         val quizButton = findViewById<Button>(R.id.btn_quiz)
