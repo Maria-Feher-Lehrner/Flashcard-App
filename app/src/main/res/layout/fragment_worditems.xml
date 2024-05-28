@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyBlue"
     tools:context=".WordItemsFragment">
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,6 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/zur_ck"
+        android:backgroundTint="@color/darkBlue"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/linlay_items"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/bearbeiten_nicht_funktional"
+        android:backgroundTint="@color/darkBlueMuted"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linlay_items" />
@@ -66,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/deutsches_wort"
+        android:textColor="@color/darkBlue"
         app:layout_constraintTop_toBottomOf="@id/btn_editItem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -94,6 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/englisches_wort"
+        android:textColor="@color/darkBlue"
         app:layout_constraintTop_toBottomOf="@id/TIL_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

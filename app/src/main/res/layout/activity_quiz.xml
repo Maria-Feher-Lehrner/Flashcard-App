@@ -2,20 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/greyBlue"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="16dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_quizTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/flash_quiz"
-            android:textColor="#2D4B65"
+            android:textColor="@color/darkBlue"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -24,7 +28,7 @@
             android:id="@+id/tv_subTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#2D4B65"
+            android:textColor="@color/darkBlue"
             android:text="@string/so_funktioniert_s"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -33,7 +37,8 @@
             android:id="@+id/tv_instruction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#2D4B65"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/darkBlue"
             android:text="@string/w_hle_zuerst_in_welche_richtung_du_dich_testen_m_chtest_deutsch_zu_englisch_oder_englisch_zu_deutsch_wenn_du_denkst_die_l_sung_zu_kennen_dr_cke_auf_quot_kontrollieren_quot_hattest_du_recht_dann_klicke_auf_den_haken_hast_du_falsch_gelegen_dann_klicke_auf_das_x_versuche_ein_wort_mindestens_3x_richtig_zu_erkennen" />
 
         <CheckedTextView
@@ -45,9 +50,10 @@
             android:id="@+id/toggleButton"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_gravity="center"
-            android:backgroundTint="#2d4b65"
-            android:textColor="#fff"
+            android:backgroundTint="@color/darkBlue"
+            android:textColor="@color/white"
             android:text="ToggleButton"
             android:textOff="EN>DE"
             android:textOn="DE>EN" />
@@ -56,8 +62,8 @@
             android:id="@+id/btn_quiz_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4378a2"
-            android:textColor="#fff"
+            android:backgroundTint="@color/teal"
+            android:textColor="@color/white"
             android:layout_marginStart="80dp"
             android:layout_marginEnd="80dp"
             android:text="@string/quiz_n_chstes_wort" />
@@ -67,6 +73,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginEnd="80dp"
             android:textAlignment="center"
             android:textSize="34sp" />
@@ -75,39 +83,40 @@
             android:id="@+id/btn_check"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#f4c434"
-            android:textColor="#2D4B65"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/darkBlue"
             android:layout_marginStart="80dp"
             android:layout_marginEnd="80dp"
             android:text="@string/kontrollieren" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="72dp"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btn_checkPositive"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:backgroundTint="#9acc8f"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
                 app:srcCompat="@android:drawable/checkbox_on_background" />
 
             <Button
                 android:id="@+id/btn_checkNegative"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="60dp"
                 android:layout_weight="1"
-                android:layout_gravity="center"
-                android:backgroundTint="#af4474"
-                android:textColor="#fff"
+                android:backgroundTint="@color/red"
                 android:text="@string/x"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -121,8 +130,8 @@
                 android:id="@+id/btn_end_quiz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#9ACC8F"
-                android:textColor="#2D4B65"
+                android:backgroundTint="@color/darkBlue"
+                android:textColor="@color/white"
                 android:layout_marginStart="80dp"
                 android:layout_marginEnd="80dp"
                 android:text="@string/zur_ck_zur_startseite" />
@@ -139,7 +148,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#4378a2"
+                android:backgroundTint="@color/darkBlue"
                 app:srcCompat="@android:drawable/ic_menu_share" />
         </LinearLayout>
 
