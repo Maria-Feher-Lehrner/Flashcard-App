@@ -44,6 +44,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_input_GER"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ask_2110967"
             tools:srcCompat="@drawable/ask_2110967" />
 
         <TextView

@@ -46,8 +46,8 @@ class QuizActivity : AppCompatActivity() {
         Log.i(LOG_TAG, "Result from other activity $transferredWordList")
         if (transferredWordList != null) {
             // TODO: Testfeld am Ende rausloeschen
-            testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
-            testFieldQuizView.text = transferredWordList.toString()
+            //testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
+            //testFieldQuizView.text = transferredWordList.toString()
         } else {
             Log.e(LOG_TAG, "Failed to retrieve wordList from intent extras")
         }
@@ -69,8 +69,8 @@ class QuizActivity : AppCompatActivity() {
 
         //TODO: Testfeld am Ende rausloeschen.
         //Ausgabe Testfeld
-        testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
-        testFieldQuizView.text = transferredWordList.toString()
+        //testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
+        //testFieldQuizView.text = transferredWordList.toString()
 
         imageButton.setOnClickListener {
             val shareableResult = transferredWordList.toString()
@@ -100,7 +100,7 @@ class QuizActivity : AppCompatActivity() {
 
         checkPositive.setOnClickListener {
             updateScore(1)
-            testFieldQuizView.text = transferredWordList.toString()
+            //testFieldQuizView.text = transferredWordList.toString()
 
             //Trigger fuer Notification:
             val wordPair = transferredWordList?.get(currentWordKey)
@@ -122,7 +122,7 @@ class QuizActivity : AppCompatActivity() {
                     updateScore(-1)
                 }
             }
-            testFieldQuizView.text = transferredWordList.toString()
+            //testFieldQuizView.text = transferredWordList.toString()
         }
 
         quitButton.setOnClickListener {
@@ -177,9 +177,9 @@ class QuizActivity : AppCompatActivity() {
         val wordPair = transferredWordList?.get(currentWordKey)
         if (wordPair != null) {
             wordPair.score += delta
-            if (wordPair.score == 3) {
+            /*if (wordPair.score == 3) {
                 showScoreNotification(this, testFieldQuizView.text.toString())
-            }
+            }*/
         }
     }
 

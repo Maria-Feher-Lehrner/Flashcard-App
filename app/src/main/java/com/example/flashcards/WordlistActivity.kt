@@ -28,7 +28,8 @@ class WordlistActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         val bundle = Bundle()
-        bundle.putSerializable(WordListFragment.ARG_WORD_LIST, ArrayList(wordPairList))
+        bundle.putSerializable(ARG_WORD_LIST, ArrayList(wordPairList))
+        //bundle.putSerializable(WordListFragment.ARG_WORD_LIST, ArrayList(wordPairList))
         navController.navigate(R.id.wordListFragment, bundle)
 
         Log.e(LOG_TAG, "onCreate")

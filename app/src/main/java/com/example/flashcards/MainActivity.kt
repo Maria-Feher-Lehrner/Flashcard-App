@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         //TODO: Am Ende Testfeld rausnehmen.
         //testfeld
-        val testField = findViewById<TextView>(R.id.test)
+        //val testField = findViewById<TextView>(R.id.test)
 
         initializeWordList()
         inputGer = findViewById(R.id.eT_language1)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         inputGer.addTextChangedListener(textWatcherGer)
         inputEn.addTextChangedListener(textWatcherEn)
-        testField.text = wordList.toString()
+        //testField.text = wordList.toString()
 
         saveButton.setOnClickListener {
             val words = readWords()
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             inputEn.text.clear()
 
             //TODO: Am Ende Testfeld rausnehmen.
-            testField.text = wordList.toString()
+            //testField.text = wordList.toString()
         }
 
         quizButton.setOnClickListener {
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         }
         deleteButton.setOnClickListener {
             wordList.clear()
-            testField.text = wordList.toString()
+            //testField.text = wordList.toString()
         }
         fab.setOnClickListener {view ->
             Log.d(LOG_TAG, "FAB was clicked")

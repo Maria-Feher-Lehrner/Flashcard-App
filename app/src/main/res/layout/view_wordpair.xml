@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_margin="4dp"
+        android:textSize="14sp"
         android:text="TextView"
-        android:textSize="12sp"
         tool:text="Beispiel"/>
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_margin="4dp"
+        android:textSize="14sp"
         android:text="TextView"
-        android:textSize="12sp"
         tool:text="example"/>
 </LinearLayout>
