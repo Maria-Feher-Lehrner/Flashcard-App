@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {view ->
             Log.d(LOG_TAG, "FAB was clicked")
             Snackbar.make(view, "FAB was clicked", Snackbar.LENGTH_LONG).show()
+            //TODO: sinnvollere Funktion implementieren. (Evtl. in andere Views verschieben und dort als Home-Button verwenden?)
         }
     }
 
