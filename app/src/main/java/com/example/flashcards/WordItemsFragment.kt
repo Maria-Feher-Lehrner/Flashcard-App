@@ -30,9 +30,7 @@ class WordItemsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.e("WordPairItem", "${fragmentArgs.wordPair}")
-        /*binding.btnBack.setOnClickListener{
-            findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
-        }*/
+
         binding.tvWordGER.text = fragmentArgs.wordPair.wordGER
         binding.tvWordEN.text = fragmentArgs.wordPair.wordEN
 

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import com.example.flashcards.data.WordPair
 import com.example.flashcards.databinding.ActivityMainBinding
@@ -29,14 +28,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val saveButton = findViewById<Button>(R.id.btn_save)
-        val quizButton = findViewById<Button>(R.id.btn_quiz)
-        val deleteButton = findViewById<Button>(R.id.btn_delete)
-        val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        val saveButton = binding.btnSave
+        val quizButton = binding.btnQuiz
+        val editButton = binding.btnEdit
+        val deleteButton = binding.btnDelete
+        val fab = binding.floatingActionButton
 
         initializeWordList()
-        inputGer = findViewById(R.id.eT_language1)
-        inputEn = findViewById(R.id.eT_language2)
+        inputGer = binding.eTLanguage1
+        inputEn = binding.eTLanguage2
 
         val textWatcherGer = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
-        binding.btnEdit.setOnClickListener{
+        editButton.setOnClickListener{
             val intent = Intent(this, WordlistActivity::class.java)
             val wordListAsSerializable = HashMap(wordList)
             intent.putExtra(EXTRA_KEY_WORDLIST, wordListAsSerializable)
@@ -105,15 +105,6 @@ class MainActivity : AppCompatActivity() {
         val word1 = inputGer.text.toString()
         val word2 = inputEn.text.toString()
         return word1 to word2
-    }
-
-    private fun initializeWordList() {
-        wordList["Vater"] = WordPair("Vater","father", 0)
-        wordList["Mutter"] = WordPair("Mutter","mother", 0)
-        wordList["Kind"] = WordPair("Kind", "child", 0)
-        wordList["Hund"] = WordPair("Hund", "dog", 0)
-        wordList["Katze"] = WordPair("Katze", "cat", 0)
-        wordList["Maus"] = WordPair("Maus", "mouse", 0)
     }
 
     override fun onResume() {
@@ -144,5 +135,14 @@ class MainActivity : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         Log.e(LOG_TAG, "onRestart")
+    }
+
+    private fun initializeWordList() {
+        wordList["Vater"] = WordPair("Vater","father", 0)
+        wordList["Mutter"] = WordPair("Mutter","mother", 0)
+        wordList["Kind"] = WordPair("Kind", "child", 0)
+        wordList["Hund"] = WordPair("Hund", "dog", 0)
+        wordList["Katze"] = WordPair("Katze", "cat", 0)
+        wordList["Maus"] = WordPair("Maus", "mouse", 0)
     }
 }
