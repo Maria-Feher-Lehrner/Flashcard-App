@@ -52,10 +52,6 @@ class WordListFragment : Fragment() {
         recyclerView.addItemDecoration(divider)
     }
 
-    /*companion object {
-        const val ARG_WORD_LIST = "word_list"
-    }*/
-
     override fun onStart() {
         super.onStart()
         Log.i(LOG_TAG, "onStart")

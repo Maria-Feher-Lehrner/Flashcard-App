@@ -25,9 +25,6 @@ class QuizActivity : AppCompatActivity() {
 
     val LOG_TAG = "QuizActivity"
 
-    //TODO: Testfeld am Ende loeschen
-    //testfeld
-    lateinit var testFieldQuizView: TextView
     private lateinit var quizView: TextView
     private lateinit var toggleLanguage: ToggleButton
     private lateinit var currentWordKey: String
@@ -40,14 +37,10 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz)
         Log.e(LOG_TAG, "onCreate")
 
-        //TODO: Hier evtl. noch etwas aufraeumen und code rund um transferredWordlist in eigene fun auslagern
         transferredWordList =
             intent.getSerializableExtra(EXTRA_KEY_WORDLIST) as? HashMap<String, WordPair>
-        Log.i(LOG_TAG, "Result from other activity $transferredWordList")
         if (transferredWordList != null) {
-            // TODO: Testfeld am Ende rausloeschen
-            //testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
-            //testFieldQuizView.text = transferredWordList.toString()
+            Log.i(LOG_TAG, "Content of transferredWordList is $transferredWordList")
         } else {
             Log.e(LOG_TAG, "Failed to retrieve wordList from intent extras")
         }
@@ -66,11 +59,6 @@ class QuizActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), REQUEST_NOTIFICATION_PERMISSION)
             }
         }
-
-        //TODO: Testfeld am Ende rausloeschen.
-        //Ausgabe Testfeld
-        //testFieldQuizView = findViewById<TextView>(R.id.testQuizView)
-        //testFieldQuizView.text = transferredWordList.toString()
 
         imageButton.setOnClickListener {
             val shareableResult = transferredWordList.toString()
@@ -100,7 +88,7 @@ class QuizActivity : AppCompatActivity() {
 
         checkPositive.setOnClickListener {
             updateScore(1)
-            //testFieldQuizView.text = transferredWordList.toString()
+            Log.i(LOG_TAG, "Updated score of transferredWordList is $transferredWordList")
 
             //Trigger fuer Notification:
             val wordPair = transferredWordList?.get(currentWordKey)
@@ -122,7 +110,7 @@ class QuizActivity : AppCompatActivity() {
                     updateScore(-1)
                 }
             }
-            //testFieldQuizView.text = transferredWordList.toString()
+            Log.i(LOG_TAG, "Updated score of transferredWordList is $transferredWordList")
         }
 
         quitButton.setOnClickListener {
@@ -155,7 +143,6 @@ class QuizActivity : AppCompatActivity() {
             BitmapFactory.decodeResource(context.resources, R.drawable.ic_launcher_foreground)
 
         builder.setLargeIcon(largeIcon)
-        //ad notificationManager diese Schreibweise aktueller und lesbarer
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(notificationId++, builder.build())
     }
@@ -177,9 +164,6 @@ class QuizActivity : AppCompatActivity() {
         val wordPair = transferredWordList?.get(currentWordKey)
         if (wordPair != null) {
             wordPair.score += delta
-            /*if (wordPair.score == 3) {
-                showScoreNotification(this, testFieldQuizView.text.toString())
-            }*/
         }
     }
 

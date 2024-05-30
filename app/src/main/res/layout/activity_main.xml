@@ -98,17 +98,6 @@
             android:textColor="@color/white"
             android:text="@string/speichern" />
 
-        <!--<TextView
-                android:id="@+id/tv_titleQuiz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#8BC34A"
-                android:backgroundTint="@color/green"
-                android:text="@string/ready"
-                android:textAlignment="center"
-                android:textSize="24sp"
-                android:textStyle="bold" />-->
-
             <Button
                 android:id="@+id/btn_quiz"
                 android:layout_width="match_parent"
@@ -156,14 +145,6 @@
                     android:textColor="@color/white"
                     android:text="@string/w_rterbuch_l_schen" />
             </LinearLayout>
-
-        <!-- NUR ZUM DEBUGGING
-            <TextView
-            android:id="@+id/test"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="20sp" />-->
 
     </LinearLayout>
 

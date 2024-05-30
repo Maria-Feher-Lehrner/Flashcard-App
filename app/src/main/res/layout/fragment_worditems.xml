@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/zur_ck"
-        android:backgroundTint="@color/darkBlue"
+        android:backgroundTint="@color/darkBlueMuted"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/linlay_items"
         app:layout_constraintEnd_toEndOf="parent"

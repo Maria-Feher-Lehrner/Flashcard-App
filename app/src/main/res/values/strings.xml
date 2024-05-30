@@ -18,7 +18,7 @@
     <string name="x">X</string>
     <string name="zur_ck_zur_startseite">Zurück zur Startseite</string>
     <string name="testquizview">TestQuizView</string>
-    <string name="zur_ck">zurück</string>
+    <string name="zur_ck">zurück (nicht funktional)</string>
     <string name="bearbeiten_nicht_funktional">bearbeiten (nicht funktional)</string>
     <string name="deutsches_wort">Deutsches Wort:</string>
     <string name="platzhalter_keine_funktion_hinterlegt">Platzhalter (keine Funktion hinterlegt)</string>

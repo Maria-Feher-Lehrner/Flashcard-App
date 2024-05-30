@@ -30,16 +30,16 @@ class WordItemsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.e("WordPairItem", "${fragmentArgs.wordPair}")
-        binding.btnBack.setOnClickListener{
+        /*binding.btnBack.setOnClickListener{
             findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
-        }
+        }*/
         binding.tvWordGER.text = fragmentArgs.wordPair.wordGER
         binding.tvWordEN.text = fragmentArgs.wordPair.wordEN
 
-        //Hier wird in Navigation kein Wert mehr zurückübergeben und deswegen ist nächster Screen komplett leer
+        /*TODO: Uebergabe von arguments beim Zuruecknavigieren fixen.
         binding.btnBack.setOnClickListener{
             findNavController().navigate(R.id.action_WordItemsFragment_to_WordListFragment)
-        }
+        }*/
     }
 
     override fun onStart() {

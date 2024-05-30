@@ -8,7 +8,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import com.example.flashcards.data.WordPair
 import com.example.flashcards.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -35,10 +34,6 @@ class MainActivity : AppCompatActivity() {
         val deleteButton = findViewById<Button>(R.id.btn_delete)
         val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
 
-        //TODO: Am Ende Testfeld rausnehmen.
-        //testfeld
-        //val testField = findViewById<TextView>(R.id.test)
-
         initializeWordList()
         inputGer = findViewById(R.id.eT_language1)
         inputEn = findViewById(R.id.eT_language2)
@@ -62,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         inputGer.addTextChangedListener(textWatcherGer)
         inputEn.addTextChangedListener(textWatcherEn)
-        //testField.text = wordList.toString()
+        Log.i(LOG_TAG, "Current content of wordlist: $wordList")
 
         saveButton.setOnClickListener {
             val words = readWords()
@@ -73,8 +68,7 @@ class MainActivity : AppCompatActivity() {
             inputGer.text.clear()
             inputEn.text.clear()
 
-            //TODO: Am Ende Testfeld rausnehmen.
-            //testField.text = wordList.toString()
+            Log.i(LOG_TAG, "Current content of wordlist after save: $wordList")
         }
 
         quizButton.setOnClickListener {
@@ -98,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         }
         deleteButton.setOnClickListener {
             wordList.clear()
-            //testField.text = wordList.toString()
+            Log.i(LOG_TAG, "Current content of wordlist after delete: $wordList")
         }
         fab.setOnClickListener {view ->
             Log.d(LOG_TAG, "FAB was clicked")

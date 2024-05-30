@@ -15,10 +15,7 @@
             app:destination="@id/wordItemsFragment"
             />
         <!--argument
-            android:name="wordPairList"
-            app:argType="com.example.flashcards.data.WordPair[]"
-            android:defaultValue="@null"
-            app:nullable="true"/-->
+            TODO: argument zur Naviation zwischen Fragments uebergeben/-->
     </fragment>
 
     <fragment
