@@ -1,3 +1,5 @@
+++++FIRST INDEPENDENTLY PROGRAMMED ANDROID APP IN KOTLIN AS FINAL CLASS PROJECT IN ANDROID BASICS++++
+
 FLASHCARDS APP
 
 This Flashcards App is designed to help users learn new vocabulary through a flashcard system. The app allows users to add new word pairs, view a list of word pairs, and quiz themselves on the vocabulary. Further functionality (like editing the word pairs) is yet to be implemented.
